@@ -45,8 +45,8 @@ dotsContainer.addEventListener('click', (e) => {
     }
 });
 
-// Auto-slide every 5 seconds
-setInterval(() => showSlide(currentSlide + 1), 5000);
+// Auto-slide every 7 seconds
+setInterval(() => showSlide(currentSlide + 1), 7000);
 
 // ---------- CART FUNCTIONALITY ----------
 let cart = [];
