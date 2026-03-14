@@ -675,7 +675,7 @@ body {
     width: 50px;
     height: 50px;
     background: #1e1e1e;
-    color: white;
+    color: transparent;
     border-radius: 50%;
     font-size: 1.3rem;
     transition: all 0.3s;
