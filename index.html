@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tush Mart – Premium Supermarket</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar (sticky, blur) -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Tush Mart</h1>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                <div class="mobile-menu" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (fullscreen, modern slider) -->
+    <section id="home" class="hero">
+        <div class="slider-container">
+                        <div class="slider" id="slider">
+                <div class="slide active">
+                    <picture>
+                        <!-- Mobile: portrait crop (max-width 768px) -->
+                        <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&h=1200&fit=crop&auto=format">
+                        <!-- Desktop: landscape -->
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&auto=format" alt="Fresh supermarket aisle">
+                    </picture>
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <span class="subtitle" data-aos="fade-up">Welcome to</span>
+                        <h2 data-aos="fade-up" data-aos-delay="100">Tush Mart</h2>
+                        <p data-aos="fade-up" data-aos-delay="200">Your one‑stop shop for fresh groceries & everyday essentials</p>
+                        <div class="slide-buttons" data-aos="fade-up" data-aos-delay="300">
+                            <a href="#products" class="btn btn-primary">Shop Now</a>
+                            <a href="#about" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=1200&fit=crop&auto=format">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=1600&auto=format" alt="Special offers">
+                    </picture>
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <span class="subtitle">Amazing Deals</span>
+                        <h2>Up to 50% Off</h2>
+                        <p>On selected items this week only. Don't miss out!</p>
+                        <div class="slide-buttons">
+                            <a href="#products" class="btn btn-primary">Grab the Deals</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="farmportrait.avif">
+                        <img src="farm.webp" alt="Fresh produce">
+                    </picture>
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <span class="subtitle">Farm Fresh</span>
+                        <h2>Organic & Local</h2>
+                        <p>Supporting local farmers with the freshest picks</p>
+                        <div class="slide-buttons">
+                            <a href="#products" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slider controls -->
+            <button class="slider-prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots" id="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Services Section (new) -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Shop With Us</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Free Delivery</h3>
+                    <p>On orders over ₦15,000 within Abuja</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>100% Fresh</h3>
+                    <p>Daily supply of farm-fresh produce</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Secure Payment</h3>
+                    <p>Multiple payment options, 100% safe</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>We're here to help anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (enhanced) -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?w=800&auto=format" alt="Tush Mart Store">
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <h2 class="section-title-left">About Tush Mart</h2>
+                    <p>Welcome to Tush Mart – your neighbourhood supermarket committed to freshness and quality. We offer a wide range of groceries, bakery items, and household essentials. Our friendly staff and clean environment make shopping a pleasure.</p>
+                    <p><strong>Address:</strong> Plot 1 Dr. Ekpendu Close, Kuje, Abuja 900105</p>
+                    <p><strong>Phone:</strong> 0704 368 0482</p>
+                    <a href="#contact" class="btn btn-primary">Visit Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section (with glowing cards) -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Products</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Products with real Unsplash images & Naira prices -->
+                <div class="product-card" data-id="1" data-name="Fresh Milk" data-price="1500" data-image="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&auto=format">
+                    <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&auto=format" alt="Fresh Milk">
+                    <h3>Fresh Milk</h3>
+                    <p class="product-description">1 litre, pasteurized, farm-fresh.</p>
+                    <p class="product-price">₦1,500</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Whole Wheat Bread" data-price="1200" data-image="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=600&auto=format">
+                    <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=600&auto=format" alt="Whole Wheat Bread">
+                    <h3>Whole Wheat Bread</h3>
+                    <p class="product-description">Freshly baked, 500g.</p>
+                    <p class="product-price">₦1,200</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="3" data-name="Organic Eggs" data-price="2500" data-image="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?w=600&auto=format">
+                    <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?w=600&auto=format" alt="Organic Eggs">
+                    <h3>Organic Eggs</h3>
+                    <p class="product-description">12 large free-range eggs.</p>
+                    <p class="product-price">₦2,500</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="4" data-name="Apple Juice" data-price="2000" data-image="https://images.unsplash.com/photo-1603569284183-8f992f7f1b8e?w=600&auto=format">
+                    <img src="appplejuice.webp" alt="Apple Juice">
+                    <h3>Apple Juice</h3>
+                    <p class="product-description">100% pure, no added sugar, 1L.</p>
+                    <p class="product-price">₦2,000</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="5" data-name="Potato Chips" data-price="1500" data-image="https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=600&auto=format">
+                    <img src="https://images.unsplash.com/photo-1613919113640-25732ec5e61f?w=600&auto=format" alt="Potato Chips">
+                    <h3>Potato Chips</h3>
+                    <p class="product-description">Classic salted, 200g.</p>
+                    <p class="product-price">₦1,500</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-id="6" data-name="Toilet Paper" data-price="3500" data-image="https://images.unsplash.com/photo-1600567195489-7b8f8f29c493?w=600&auto=format">
+                    <img src="toiletpaper.webp" alt="Toilet Paper">
+                    <h3>Toilet Paper</h3>
+                    <p class="product-description">6 rolls, soft and strong.</p>
+                    <p class="product-price">₦3,500</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (new) -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"Tush Mart is my go-to supermarket. Always fresh, always friendly. Highly recommended!"</p>
+                    <div class="customer">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                        <div>
+                            <h4>Amara Okafor</h4>
+                            <span>Loyal Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"Great prices and the delivery is super fast. I love the organic section!"</p>
+                    <div class="customer">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                        <div>
+                            <h4>Chidi Eze</h4>
+                            <span>Regular Shopper</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"The best supermarket in Kuje! Clean, well-stocked, and the staff are lovely."</p>
+                    <div class="customer">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer">
+                        <div>
+                            <h4>Fatima Bello</h4>
+                            <span>Happy Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (improved) -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Visit or Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Plot 1 Dr. Ekpendu Close, Kuje, Abuja 900105</p>
+                    <p><i class="fas fa-phone"></i> 0704 368 0482</p>
+                    <p><i class="fas fa-envelope"></i> info@tushmart.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-map" data-aos="fade-up" data-aos-delay="200">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.765812558314!2d7.147678!3d8.9835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b1b3b3b3b3b%3A0x3b3b3b3b3b3b3b!2sKuje%2C%20Abuja!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Newsletter -->
+    <footer class="footer">
+        <div class="container">
+            <div class="newsletter" data-aos="fade-up">
+                <h3>Subscribe to our newsletter</h3>
+                <p>Get the latest offers and updates</p>
+                <div class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address">
+                    <button class="btn btn-primary" id="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tush Mart. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-cart" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total:</strong> ₦<span id="cart-total">0</span>
+            </div>
+            <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Newsletter Modal -->
+    <div class="newsletter-modal" id="newsletter-modal">
+        <div class="newsletter-modal-content">
+            <span class="close-newsletter" id="close-newsletter">&times;</span>
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Stay updated with our latest offers and news.</p>
+            <input type="email" id="modal-email" placeholder="Your email address">
+            <button class="btn btn-primary" id="modal-subscribe">Subscribe</button>
+        </div>
+    </div>
+    
+    <!-- Flash Message -->
+    <div class="flash-message" id="flash-message">Item added to cart!</div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
